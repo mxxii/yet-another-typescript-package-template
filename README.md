@@ -1,5 +1,7 @@
 # Yet another TypeScript package template
 
+![test and lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test%20and%20lint/badge.svg)
+
 This template is aimed for Node.js packages development.
 
 This template is made with a goal to cover multiple useful tools. There is some redundancy - this is intentional. It is easier to remove unneeded parts than add missing parts.
@@ -111,6 +113,14 @@ Many tools come with their own watchers, others don't. <https://github.com/Qard/
 Testing Node.js: <https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs>
 
 Caching: <https://docs.github.com/en/free-pro-team@latest/actions/guides/caching-dependencies-to-speed-up-workflows>
+
+## Badges
+
+GitHub workflow status badge: <https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/adding-a-workflow-status-badge>
+
+GitHub currently doesn't provide badges for coverage.
+
+List of coverage providers supported by Shields_io: <https://shields.io/category/coverage>
 
 ## Publishing
 
