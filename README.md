@@ -106,6 +106,16 @@ Can use any assertion libraries: <https://mochajs.org/#assertions>, this templat
 
 Many tools come with their own watchers, others don't. <https://github.com/Qard/onchange> seems to be the most straightforward solution to add this feature where it is missing.
 
+## GitHub actions
+
+Testing Node.js: <https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs>
+
+Caching: <https://docs.github.com/en/free-pro-team@latest/actions/guides/caching-dependencies-to-speed-up-workflows>
+
+## Publishing
+
+This part is left out for now. No good template solution can be provided yet.
+
 ## License
 
 This repository is a mere template without own functionality, a configuration for external tools and libraries. And as such, it shouldn't be considered a subject of copyright. Instead, you are encouraged to copy it and apply the license of your choice to the product you build.
