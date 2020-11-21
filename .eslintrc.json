@@ -1,0 +1,39 @@
+{
+  "env": {
+    "node": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsonc/auto-config",
+    "plugin:jsonc/recommended-with-jsonc",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "ignorePatterns": [
+    ".nyc_output",
+    ".vscode",
+    "coverage",
+    "dist",
+    "lib",
+    "node_modules",
+    "package-lock.json"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2020
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "jsonc"
+  ],
+  "rules": {
+    "indent": ["error", 2]
+  },
+  "overrides": [
+    {
+      "files": [ "*.json", "*.json5", "*.jsonc" ],
+      "parser": "jsonc-eslint-parser"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Add files here to ignore them from prettier formatting
+
+.nyc_output
+.vscode
+coverage
+dist
+lib
+node_modules
+tmp
+**/*.json
+**/*.json5
+**/*.jsonc
