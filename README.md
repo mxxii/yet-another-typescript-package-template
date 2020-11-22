@@ -52,6 +52,8 @@ Docs: <https://typicode.github.io/husky/#/>, <https://github.com/typicode/husky/
 
 <https://github.com/typicode/pinst> prevents publishing the `postinstall` script that `husky` uses for itself.
 
+<https://github.com/watson/is-ci> is used to prevent calling `husky` in CI environment.
+
 ## eslint
 
 ESlint with TypeScript plugin is currently the preferred way to lint `.ts` files.
