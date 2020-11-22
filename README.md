@@ -48,7 +48,9 @@ Depending on your needs <https://github.com/SitePen/dts-generator>, <https://git
 
 Belt and braces. Extra hooks to run code checks before it can get to the repository.
 
-Docs: <https://github.com/typicode/husky/tree/master>
+Docs: <https://typicode.github.io/husky/#/>, <https://github.com/typicode/husky/tree/master>
+
+<https://github.com/typicode/pinst> prevents publishing the `postinstall` script that `husky` uses for itself.
 
 ## eslint
 
