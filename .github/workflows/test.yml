@@ -1,15 +1,16 @@
-name: test and lint
+name: test
 
 on: [push, pull_request]
 
 jobs:
-  check-all:
-    name: Run all checks
+  test:
+    name: Run tests and upload coverage reports
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x]
+        node-version: [12.x]
         os: [ubuntu-latest, windows-latest]
+        test-set: [ava, jest, mocha]
 
     runs-on: ${{ matrix.os }}
 
@@ -37,6 +38,15 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run checkAll
-        env:
-          CI: true
+      - name: Generate coverage report with ${{ matrix.test-set }}
+        run: npm run test:${{ matrix.test-set }}:cover
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/lcov.info
+          flags: unittests,${{ matrix.test-set }}
+          env_vars: OS
+          fail_ci_if_error: true
+          verbose: true

@@ -1,6 +1,6 @@
 # Yet another TypeScript package template
 
-![test and lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test%20and%20lint/badge.svg)
+![lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/lint/badge.svg) ![test status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test/badge.svg) [![codecov](https://codecov.io/gh/mxxii/yet-another-typescript-package-template/branch/main/graph/badge.svg?token=OQQ500N8HC)](https://codecov.io/gh/mxxii/yet-another-typescript-package-template)
 
 This template is aimed for Node.js packages development.
 
@@ -118,9 +118,13 @@ Caching: <https://docs.github.com/en/free-pro-team@latest/actions/guides/caching
 
 GitHub workflow status badge: <https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/adding-a-workflow-status-badge>
 
-GitHub currently doesn't provide badges for coverage.
+## Coverage
+
+GitHub itself currently doesn't provide badges for coverage. But coverage data can be sent to an external service. For some of them it is as easy as using a ready-made action.
 
 List of coverage providers supported by Shields_io: <https://shields.io/category/coverage>
+
+Codecov seems to be the most practical one.
 
 ## Publishing
 
