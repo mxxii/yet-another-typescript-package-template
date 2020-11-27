@@ -59,7 +59,6 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@jest/globals": "^26.6.2",
     "@rollup/plugin-typescript": "^6.1.0",
     "@tsconfig/node12": "^1.0.7",
     "@types/jest": "^26.0.15",

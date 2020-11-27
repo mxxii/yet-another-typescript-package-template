@@ -1,5 +1,3 @@
-import { expect, test } from '@jest/globals';
-
 import { add } from '../src';
 
 test('adds 1 + 2 to equal 3', () => {
