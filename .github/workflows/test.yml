@@ -46,7 +46,6 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ./coverage/lcov.info
-          flags: unittests,${{ matrix.test-set }}
-          env_vars: OS
+          flags: unit,${{ matrix.test-set }},${{ matrix.os }}
           fail_ci_if_error: true
           verbose: true
