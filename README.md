@@ -1,6 +1,9 @@
 # Yet another TypeScript package template
 
-![lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/lint/badge.svg) ![test status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test/badge.svg) [![codecov](https://codecov.io/gh/mxxii/yet-another-typescript-package-template/branch/main/graph/badge.svg?token=OQQ500N8HC)](https://codecov.io/gh/mxxii/yet-another-typescript-package-template)
+![lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/lint/badge.svg)
+![test status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test/badge.svg)
+[![codecov badge](https://codecov.io/gh/mxxii/yet-another-typescript-package-template/branch/main/graph/badge.svg?token=OQQ500N8HC)](https://codecov.io/gh/mxxii/yet-another-typescript-package-template)
+[![dev dependencies status badge](https://david-dm.org/mxxii/yet-another-typescript-package-template/dev-status.svg)](https://david-dm.org/mxxii/yet-another-typescript-package-template?type=dev)
 
 This template is aimed for Node.js packages development.
 
@@ -125,6 +128,12 @@ GitHub itself currently doesn't provide badges for coverage. But coverage data c
 List of coverage providers supported by Shields_io: <https://shields.io/category/coverage>
 
 Codecov seems to be the most practical one.
+
+## Dependencies
+
+<https://david-dm.org/> provides a nice badge. It won't be green most of the times though.
+
+<https://github.com/dylang/npm-check> is a handy tool to manage dependencies. It is meant to be installed globally though, so it's only mentioned here.
 
 ## Publishing
 
