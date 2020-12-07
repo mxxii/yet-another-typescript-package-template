@@ -59,7 +59,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@rollup/plugin-typescript": "^6.1.0",
+    "@rollup/plugin-typescript": "^8.0.0",
     "@tsconfig/node12": "^1.0.7",
     "@types/jest": "^26.0.15",
     "@types/mocha": "^8.0.4",
