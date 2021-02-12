@@ -57,7 +57,7 @@ Docs for v4: <https://github.com/typicode/husky/tree/master>
 
 ESlint with TypeScript plugin is currently the preferred way to lint `.ts` files.
 
-Only recommended configs are included with the template. And only a couple of exceptions made for other tools.
+Only recommended configs are included with the template, with a minimal set of overrides (same applies to all linting tools).
 
 Rules: <https://eslint.org/docs/rules/>
 
@@ -71,7 +71,7 @@ Prettier is basically unusable for json files. It is therefore disabled for thos
 
 ## eslint-plugin-jsonc
 
-Apparently the most solid solution to lint and format JSON files. It reuses ESlint rules where appropriate.
+Apparently the most solid solution to lint and format JSON files. It reuses ESlint rules where appropriate. Not all defaults play nicely with all configs though, so a couple of overrides is provided.
 
 Rules: <https://ota-meshi.github.io/eslint-plugin-jsonc/rules/>
 
