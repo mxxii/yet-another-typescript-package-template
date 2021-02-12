@@ -43,7 +43,7 @@ Althernative TypeScript plugin with some extra features: <https://github.com/ezo
 
 There are multiple ways to bundle all types into a single `.d.ts` file.
 
-<https://github.com/vytenisu/npm-dts> seems to be the nicest one. With a catch that the version `1.3.5` can't create the output directory when needed. Solved with `mkdirp` and I hope to be able to remove that soon.
+<https://github.com/vytenisu/npm-dts> seems to be the nicest one.
 
 Depending on your needs <https://github.com/SitePen/dts-generator>, <https://github.com/timocov/dts-bundle-generator> or <https://github.com/TypeStrong/dts-bundle> might also be options to consider.
 
@@ -134,6 +134,8 @@ Codecov seems to be the most practical one.
 List of dependency trackers supported by Shields_io: <https://shields.io/category/dependencies>
 
 Depfu seems to be well working and useful.
+
+Dependabot is a part of GitHub now, it delivers security updates automatically and can be configured to do more. Good alternative.
 
 <https://github.com/dylang/npm-check> is a handy tool when you need to manage deps manually. It is meant to be installed globally though, so it's only mentioned here.
 
