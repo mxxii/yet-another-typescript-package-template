@@ -6,8 +6,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:jsonc/auto-config",
     "plugin:jsonc/recommended-with-jsonc",
-    "prettier",
-    "prettier/@typescript-eslint"
+    "prettier"
   ],
   "ignorePatterns": [
     ".nyc_output",
