@@ -111,6 +111,8 @@ Can use any assertion libraries: <https://mochajs.org/#assertions>, this templat
 
 Many tools come with their own watchers, others don't. <https://github.com/Qard/onchange> seems to be the most straightforward solution to add this feature where it is missing.
 
+<https://github.com/M-Zuber/npm-watch> might be a suitable alternative in some cases.
+
 ## GitHub actions
 
 Testing Node.js: <https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs>
