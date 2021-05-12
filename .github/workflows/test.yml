@@ -39,7 +39,7 @@ jobs:
       - run: npm ci
 
       - name: Generate coverage report with ${{ matrix.test-set }}
-        run: npm run test:${{ matrix.test-set }}:cover
+        run: npm run test-cover:${{ matrix.test-set }}
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
