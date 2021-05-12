@@ -11,7 +11,7 @@ This template is made with a goal to cover multiple useful tools. There is some 
 
 ## Node.js
 
-As of November 2020, Node 10 is not too far from the end of it's LTS period and Node 12 is currently active. Decision was made to ignore Node versions prior to 12, since this is a starter for new packages.
+Node 12 is the target version.
 
 <https://nodejs.org/en/about/releases/>
 
@@ -21,17 +21,13 @@ Up to date recommendations: <https://nodejs.org/api/packages.html#packages_dual_
 
 This template assumes the library is going to be stateless.
 
-## Bare tsc
-
-All you need to get your TypeScript files transpiled to JavaScript is the TSC compiler that comes with the `typescript` package.
+## TSConfig
 
 TSConfig reference: <https://www.typescriptlang.org/docs/handbook/tsconfig-json.html>
 
-`tsc` CLI: <https://www.typescriptlang.org/docs/handbook/compiler-options.html>
-
 ## rollup
 
-`rollup` bundler makes it even easier in some cases.
+`rollup` bundler allows certain things that [`tsc` CLI](https://www.typescriptlang.org/docs/handbook/compiler-options.html) doesn't, such as more flexible output files naming - this is a must for a dual package.
 
 Docs: <https://rollupjs.org/guide/en/>
 
@@ -39,19 +35,13 @@ TypeScript support is provided by the official plugin: <https://github.com/rollu
 
 Althernative TypeScript plugin with some extra features: <https://github.com/ezolenko/rollup-plugin-typescript2>
 
-## Types bundling
+## concurrently
 
-There are multiple ways to bundle all types into a single `.d.ts` file.
+[Concurrently](https://github.com/kimmobrunfeldt/concurrently) is the closest substitute for `npm-run-all` that is not abandoned.
 
-<https://github.com/vytenisu/npm-dts> seems to be the nicest one.
+Sequential run can be achieved with `-m 1` arg.
 
-Depending on your needs <https://github.com/SitePen/dts-generator>, <https://github.com/timocov/dts-bundle-generator> or <https://github.com/TypeStrong/dts-bundle> might also be options to consider.
-
-## husky
-
-Belt and braces. Extra hooks to run code checks before it can get to the repository.
-
-Docs for v4: <https://github.com/typicode/husky/tree/master>
+There is also this fork of `npm-run-all` that receives package updates: <https://github.com/bcomnes/npm-run-all2>
 
 ## eslint
 
@@ -60,6 +50,24 @@ ESlint with TypeScript plugin is currently the preferred way to lint `.ts` files
 Only recommended configs are included with the template, with a minimal set of overrides (same applies to all linting tools).
 
 Rules: <https://eslint.org/docs/rules/>
+
+Various plugins can conflict with each other so it's a good idea to usee `overrides` in `.eslintrc.json` to keep configuration for different file types separate.
+
+Separate `tsconfig.eslint.json` file allows to lint test files.
+
+## tsdoc
+
+TSDoc: <https://tsdoc.org/>
+
+ESlint plugin: <https://tsdoc.org/pages/packages/eslint-plugin-tsdoc/>
+
+## typedoc
+
+Generate API documentation in the `/docs` folder based on code and TSDoc comments.
+
+TypeDoc: <https://typedoc.org/>
+
+Markdown plugin: <https://github.com/tgreyuk/typedoc-plugin-markdown>
 
 ## prettier
 
@@ -90,6 +98,8 @@ TypeScript support via: <https://github.com/TypeStrong/ts-node>
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
 Coverage support via: <https://github.com/istanbuljs/nyc>
+
+Macros and snapshots are pleasure to work with in AVA.
 
 ## jest
 

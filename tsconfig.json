@@ -1,6 +1,11 @@
 {
   "extends": "@tsconfig/node12/tsconfig.json",
   "include": [
-    "src/**/*"
-  ]
+    "src/**/*.ts"
+  ],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "readme": "none",
+    "out": "docs"
+  }
 }
