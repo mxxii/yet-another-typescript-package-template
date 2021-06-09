@@ -1,0 +1,10 @@
+{
+    "config": {
+      "default": true,
+      "first-line-heading": false,
+      "line-length": false,
+      "no-duplicate-header": { "allow_different_nesting": true }
+    },
+    "globs": [ "**/*.md" ],
+    "ignores": [ "node_modules" ]
+  }

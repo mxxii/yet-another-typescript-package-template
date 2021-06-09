@@ -87,9 +87,9 @@ Rules: <https://ota-meshi.github.io/eslint-plugin-jsonc/rules/>
 
 Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 
-<https://github.com/DavidAnson/markdownlint-cli2> is more flexible all around, but with pretty inconvenient interface - any options can only be passed via second-order config file.
+<https://github.com/DavidAnson/markdownlint-cli2> seems to be a better CLI all around at this point.
 
-<https://github.com/igorshubovych/markdownlint-cli> is used instead, because there is some use for command line arguments.
+<https://github.com/igorshubovych/markdownlint-cli> followed more conventional approach but is not going to receive future improvements.
 
 ## ava
 

@@ -12,7 +12,7 @@ yet-another-typescript-package-template
 
 ### add
 
-▸ **add**(`a`: *number*, `b`: *number*): *number*
+▸ **add**(`a`, `b`): `number`
 
 Add two numbers.
 
@@ -20,11 +20,15 @@ Add two numbers.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `a` | *number* | first number. |
-| `b` | *number* | second number. |
+| `a` | `number` | first number. |
+| `b` | `number` | second number. |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 the sum of two numbers.
 
-Defined in: [myModule.ts:8](https://github.com/mxxii/yet-another-typescript-package-template/blob/139d62b/src/myModule.ts#L8)
+#### Defined in
+
+[myModule.ts:8](https://github.com/mxxii/yet-another-typescript-package-template/blob/847e3cf/src/myModule.ts#L8)
