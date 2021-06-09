@@ -143,11 +143,9 @@ Codecov seems to be the most practical one.
 
 ## Dependencies
 
-List of dependency trackers supported by Shields_io: <https://shields.io/category/dependencies>
+[Depfu](https://depfu.com/) seems to be useful as a display for the state of dependencies. But their "reasonably up-to-date" policy - a feature that should make their product more pleasing to use - doesn't seem to work as expected and appears way too "lazy".
 
-Depfu seems to be well working and useful.
-
-Dependabot is a part of GitHub now, it delivers security updates automatically and can be configured to do more. Good alternative.
+Dependabot is a part of GitHub now, it delivers security updates automatically and can be configured to create regular dependency updates. Among the list of package managers such as npm it also has Github Actions. [Documentation](https://docs.github.com/en/code-security/supply-chain-security/about-dependabot-version-updates).
 
 <https://github.com/dylang/npm-check> is a handy tool when you need to manage deps manually. It is meant to be installed globally though, so it's only mentioned here.
 
