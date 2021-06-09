@@ -3,7 +3,6 @@
 ![lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/lint/badge.svg)
 ![test status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test/badge.svg)
 [![codecov badge](https://codecov.io/gh/mxxii/yet-another-typescript-package-template/branch/main/graph/badge.svg?token=OQQ500N8HC)](https://codecov.io/gh/mxxii/yet-another-typescript-package-template)
-[![depfu dependencies status badge](https://badges.depfu.com/badges/a4c7ba19a3af3a387a1a7dd3ef61aee4/overview.svg)](https://depfu.com/github/mxxii/yet-another-typescript-package-template?project_id=18000)
 
 This template is aimed for Node.js packages development.
 
