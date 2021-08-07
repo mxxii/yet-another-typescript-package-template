@@ -28,7 +28,3 @@ Add two numbers.
 `number`
 
 the sum of two numbers.
-
-#### Defined in
-
-[myModule.ts:8](https://github.com/mxxii/yet-another-typescript-package-template/blob/cb31091/src/myModule.ts#L8)

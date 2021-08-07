@@ -4,6 +4,7 @@
     "src/**/*.ts"
   ],
   "typedocOptions": {
+    "disableSources": true,
     "entryPoints": ["src/index.ts"],
     "readme": "none",
     "out": "docs"
