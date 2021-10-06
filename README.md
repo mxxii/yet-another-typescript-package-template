@@ -97,8 +97,6 @@ TypeScript support via: <https://github.com/TypeStrong/ts-node>
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
-Coverage support via: <https://github.com/istanbuljs/nyc>
-
 Macros and snapshots are pleasure to work with in AVA.
 
 ## jest
@@ -112,8 +110,6 @@ The most popular testing framework nowadays, but often feels like a victim of it
 ## mocha
 
 TypeScript support via: <https://github.com/TypeStrong/ts-node>
-
-Coverage support via: <https://github.com/istanbuljs/nyc>
 
 Can use any assertion libraries: <https://mochajs.org/#assertions>, this template just uses <https://nodejs.org/api/assert.html>.
 
@@ -139,7 +135,9 @@ GitHub itself currently doesn't provide badges for coverage. But coverage data c
 
 List of coverage providers supported by Shields_io: <https://shields.io/category/coverage>
 
-Codecov seems to be the most practical one.
+Codecov seems to be the most practical one. <https://about.codecov.io/for/open-source/>
+
+<https://github.com/bcoe/c8> is used for coverage reports generation with AVA and Mocha. More on c8: <https://medium.com/the-node-js-collection/rethinking-javascript-test-coverage-5726fb272949>. Jest comes bundled with something on it's own.
 
 ## Dependencies
 
@@ -148,6 +146,8 @@ Codecov seems to be the most practical one.
 Dependabot is a part of GitHub now, it delivers security updates automatically and can be configured to create regular dependency updates. Among the list of package managers such as npm it also has Github Actions. [Documentation](https://docs.github.com/en/code-security/supply-chain-security/about-dependabot-version-updates).
 
 <https://github.com/dylang/npm-check> is a handy tool when you need to manage deps manually. It is meant to be installed globally though, so it's only mentioned here.
+
+<https://marketplace.visualstudio.com/items?itemName=idered.npm> Node Dependencies VScode extension can be extremely handy or annoying depending on how you look at it.
 
 ## Publishing
 
