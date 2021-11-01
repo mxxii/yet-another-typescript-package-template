@@ -71,22 +71,26 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.59.0",
     "ts-jest": "^27.0.7",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.4.0",
     "tslib": "^2.3.1",
     "typedoc": "~0.22.5",
     "typedoc-plugin-markdown": "^3.11.3",
     "typescript": "^4.4.4"
   },
   "ava": {
-    "extensions": [
-      "ts"
-    ],
+    "extensions": {
+      "ts": "module"
+    },
     "files": [
       "test-ava/**/*.ts"
     ],
-    "require": [
-      "ts-node/register"
+    "nodeArguments": [
+      "--experimental-specifier-resolution=node",
+      "--loader=ts-node/esm"
     ],
+    "nonSemVerExperiments": {
+      "configurableModuleFormat": true
+    },
     "verbose": true
   },
   "jest": {
@@ -110,7 +114,10 @@
     "extension": [
       "ts"
     ],
-    "spec": "test-mocha/**/*.ts",
-    "require": "ts-node/register"
+    "node-option": [
+      "experimental-specifier-resolution=node",
+      "loader=ts-node/esm"
+    ],
+    "spec": "test-mocha/**/*.ts"
   }
 }

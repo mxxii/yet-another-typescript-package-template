@@ -93,7 +93,7 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 
 ## ava
 
-TypeScript support via: <https://github.com/TypeStrong/ts-node>
+TypeScript support via <https://github.com/TypeStrong/ts-node>. ts-node v10 requires the experimental flag and shows a warning in console when used with Node 12. The feature was [unflagged](https://github.com/nodejs/modules/blob/main/doc/archive/plan-for-new-modules-implementation.md) in Node 13.7.0.
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
@@ -109,9 +109,9 @@ The most popular testing framework nowadays, but often feels like a victim of it
 
 ## mocha
 
-TypeScript support via: <https://github.com/TypeStrong/ts-node>
+TypeScript support via <https://github.com/TypeStrong/ts-node>. Mocha documentation is lacking so it wasn't obvious at all how to supply the required node arguments.
 
-Can use any assertion libraries: <https://mochajs.org/#assertions>, this template just uses <https://nodejs.org/api/assert.html>.
+Mocha can use any assertion libraries: <https://mochajs.org/#assertions>, this template just uses <https://nodejs.org/api/assert.html>.
 
 ## onchange
 
