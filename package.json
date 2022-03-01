@@ -63,7 +63,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsonc": "^2.1.0",
     "eslint-plugin-tsdoc": "^0.2.14",
-    "jest": "^27.4.7",
+    "jest": "^27.5.1",
     "markdownlint-cli2": "^0.4.0",
     "mocha": "^9.2.0",
     "onchange": "^7.1.0",
