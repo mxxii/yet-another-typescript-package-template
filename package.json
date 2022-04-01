@@ -65,7 +65,7 @@
     "eslint-plugin-tsdoc": "^0.2.14",
     "jest": "^27.4.7",
     "markdownlint-cli2": "^0.4.0",
-    "mocha": "^9.2.0",
+    "mocha": "^9.2.2",
     "onchange": "^7.1.0",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
