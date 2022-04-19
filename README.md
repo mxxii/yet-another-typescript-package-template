@@ -33,7 +33,7 @@ Docs: <https://rollupjs.org/guide/en/>
 
 TypeScript support is provided by the official plugin: <https://github.com/rollup/plugins/tree/master/packages/typescript/#readme>
 
-Althernative TypeScript plugin with some extra features: <https://github.com/ezolenko/rollup-plugin-typescript2>
+Alternative TypeScript plugin with some extra features: <https://github.com/ezolenko/rollup-plugin-typescript2>
 
 ## concurrently
 
