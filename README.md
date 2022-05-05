@@ -147,7 +147,7 @@ Dependabot is a part of GitHub now, it delivers security updates automatically a
 
 <https://github.com/dylang/npm-check> is a handy tool when you need to manage deps manually. It is meant to be installed globally though, so it's only mentioned here.
 
-<https://marketplace.visualstudio.com/items?itemName=idered.npm> Node Dependencies VScode extension can be extremely handy or annoying depending on how you look at it.
+<https://marketplace.visualstudio.com/items?itemName=idered.npm> Node Dependencies extension for VSCode is very handy as well.
 
 ## Publishing
 
