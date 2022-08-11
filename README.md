@@ -3,7 +3,7 @@
 ![lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/lint/badge.svg)
 ![test status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test/badge.svg)
 [![codecov badge](https://codecov.io/gh/mxxii/yet-another-typescript-package-template/branch/main/graph/badge.svg?token=OQQ500N8HC)](https://codecov.io/gh/mxxii/yet-another-typescript-package-template)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/mxxii/yet-another-typescript-package-template)
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/mxxii/yet-another-typescript-package-template)
 
 This template is aimed for Node.js packages development.
 
@@ -11,7 +11,7 @@ This template is made with a goal to cover multiple useful tools. There is some 
 
 ## Node.js
 
-Node 12 is the target version.
+Node 14 is the target version.
 
 <https://nodejs.org/en/about/releases/>
 
