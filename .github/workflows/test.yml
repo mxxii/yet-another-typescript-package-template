@@ -11,6 +11,11 @@ jobs:
         node-version: [14.x]
         os: [ubuntu-latest, windows-latest]
         test-set: [ava, jest, mocha]
+        include:
+          - os: windows-latest
+            echo: ''
+          - os: ubuntu-latest
+            echo: 'echo'
 
     runs-on: ${{ matrix.os }}
 
@@ -27,7 +32,7 @@ jobs:
       - name: Get npm cache directory
         id: npm-cache-dir
         run: |
-          echo "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
+          ${{matrix.echo}} "dir=$(npm config get cache)" >> $GITHUB_OUTPUT
 
       - uses: actions/cache@v3
         id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
