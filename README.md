@@ -7,8 +7,6 @@
 
 This template is aimed for Node.js packages development.
 
-This template is made with a goal to cover multiple useful tools. There is some redundancy - this is intentional. It is easier to remove unneeded parts than add missing parts.
-
 ## Node.js
 
 Node 14 is the target version.
@@ -93,25 +91,11 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 
 ## ava
 
-TypeScript support via <https://github.com/TypeStrong/ts-node>. ts-node v10 requires the experimental flag and shows a warning in console when used with Node 12. The feature was [unflagged](https://github.com/nodejs/modules/blob/main/doc/archive/plan-for-new-modules-implementation.md) in Node 13.7.0.
+My test framework of choice. Macros and snapshots are pleasure to work with in AVA. Jest often causes various troubles.
+
+TypeScript support via <https://github.com/TypeStrong/ts-node>.
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
-
-Macros and snapshots are pleasure to work with in AVA.
-
-## jest
-
-TypeScript support via: <https://github.com/kulshekhar/ts-jest>
-
-Alternative with Babel: <https://jestjs.io/docs/en/getting-started#using-typescript>
-
-The most popular testing framework nowadays, but often feels like a victim of it's own size and popularity. Got some unexpected behavior in terms of configuration when preparing this template.
-
-## mocha
-
-TypeScript support via <https://github.com/TypeStrong/ts-node>. Mocha documentation is lacking so it wasn't obvious at all how to supply the required node arguments.
-
-Mocha can use any assertion libraries: <https://mochajs.org/#assertions>, this template just uses <https://nodejs.org/api/assert.html>.
 
 ## onchange
 

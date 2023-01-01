@@ -32,16 +32,10 @@
     "prepublishOnly": "npm run checkAll",
     "test": "concurrently npm:test:*",
     "test:ava": "ava --timeout=15s",
-    "test:jest": "jest",
-    "test:mocha": "mocha",
     "test-cover:ava": "c8 --reporter=lcov --reporter=text-summary ava",
-    "test-cover:jest": "jest --coverage",
-    "test-cover:mocha": "c8 --reporter=lcov --reporter=text-summary mocha",
     "watch:ava": "jest --watchAll",
     "watch:eslint": "onchange -v -f add -f change \"**/*.{js,json,jsonc,ts}\" -- eslint --fix --fix-type layout {{file}}",
-    "watch:jest": "jest --watchAll",
     "watch:md": "onchange -v -f add -f change \"**/*.md\" -- markdownlint --fix {{file}}",
-    "watch:mocha": "mocha --watch",
     "watch:prettier": "onchange -v -f add -f change \"**/*\" -- prettier --write --ignore-unknown {{file}}",
     "watch:rollup": "rollup -c --watch"
   },
@@ -51,31 +45,26 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^10.0.1",
     "@tsconfig/node14": "^1.0.3",
-    "@types/jest": "^29.2.3",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "~14.18.34",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
+    "@types/node": "~14.18.36",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
     "ava": "^5.1.0",
     "c8": "^7.12.0",
     "concurrently": "^7.6.0",
-    "eslint": "^8.28.0",
+    "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsonc": "^2.5.0",
     "eslint-plugin-tsdoc": "^0.2.17",
-    "jest": "^29.3.1",
-    "markdownlint-cli2": "^0.5.1",
-    "mocha": "^10.1.0",
+    "markdownlint-cli2": "^0.6.0",
     "onchange": "^7.1.0",
-    "prettier": "^2.8.0",
+    "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.1",
-    "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "tslib": "^2.4.1",
-    "typedoc": "~0.23.21",
-    "typedoc-plugin-markdown": "~3.13.6",
-    "typescript": "~4.9.3"
+    "typedoc": "~0.23.23",
+    "typedoc-plugin-markdown": "~3.14.0",
+    "typescript": "~4.9.4"
   },
   "ava": {
     "extensions": {
@@ -89,32 +78,5 @@
       "--loader=ts-node/esm"
     ],
     "verbose": true
-  },
-  "jest": {
-    "coverageReporters": [
-      "text-summary",
-      "lcov"
-    ],
-    "forceCoverageMatch": [
-      "**/src/**/*.ts"
-    ],
-    "preset": "ts-jest",
-    "roots": [
-      "<rootDir>/test-jest/"
-    ],
-    "testEnvironment": "node",
-    "testRegex": [
-      ".+\\.ts$"
-    ]
-  },
-  "mocha": {
-    "extension": [
-      "ts"
-    ],
-    "node-option": [
-      "experimental-specifier-resolution=node",
-      "loader=ts-node/esm"
-    ],
-    "spec": "test-mocha/**/*.ts"
   }
 }
