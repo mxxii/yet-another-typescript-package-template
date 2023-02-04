@@ -97,6 +97,14 @@ TypeScript support via <https://github.com/TypeStrong/ts-node>.
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
+## expect-type
+
+`tsd` is the most known tool for type tests but turns out it is rather opinionated and has some limitations.
+
+<https://github.com/mmkal/expect-type> seems to be a better alternative. The only disadvantage is that it gives somewhat obscure failure messages. It already pushes the envelope of what's possible. But there are some discussions in GitHub repo about possible improvements.
+
+A common observation about type testing: it is not well compatible with unit testing. The best approach I see is to keep it separate and just run `tsc --noEmit` over it.
+
 ## onchange
 
 Many tools come with their own watchers, others don't. <https://github.com/Qard/onchange> seems to be the most straightforward solution to add this feature where it is missing.
@@ -131,7 +139,9 @@ Dependabot is a part of GitHub now, it delivers security updates automatically a
 
 <https://github.com/dylang/npm-check> is a handy tool when you need to manage deps manually. It is meant to be installed globally though, so it's only mentioned here.
 
-<https://marketplace.visualstudio.com/items?itemName=idered.npm> Node Dependencies extension for VSCode is very handy as well.
+<https://marketplace.visualstudio.com/items?itemName=idered.npm> extension for VSCode had a good premise but seems to be dropped half-baked. I only use it now to quickly see the list of available versions for some packages.
+
+<https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade> extension for VSCode is currently the most helpful tool for me to update dependencies.
 
 ## Publishing
 
