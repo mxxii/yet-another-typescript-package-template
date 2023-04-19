@@ -35,7 +35,7 @@ Alternative TypeScript plugin with some extra features: <https://github.com/ezol
 
 ## concurrently
 
-[Concurrently](https://github.com/kimmobrunfeldt/concurrently) is the closest substitute for `npm-run-all` that is not abandoned.
+[Concurrently](https://github.com/open-cli-tools/concurrently) is the closest substitute for `npm-run-all` that is not abandoned.
 
 Sequential run can be achieved with `-m 1` arg.
 
@@ -113,9 +113,8 @@ Many tools come with their own watchers, others don't. <https://github.com/Qard/
 
 ## GitHub actions
 
-Testing Node.js: <https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs>
-
-Caching: <https://docs.github.com/en/free-pro-team@latest/actions/guides/caching-dependencies-to-speed-up-workflows>
+- <https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs>
+- <https://github.com/actions/setup-node>
 
 ## Badges
 
@@ -129,7 +128,7 @@ List of coverage providers supported by Shields_io: <https://shields.io/category
 
 Codecov seems to be the most practical one. <https://about.codecov.io/for/open-source/>
 
-<https://github.com/bcoe/c8> is used for coverage reports generation with AVA and Mocha. More on c8: <https://medium.com/the-node-js-collection/rethinking-javascript-test-coverage-5726fb272949>. Jest comes bundled with something on it's own.
+<https://github.com/bcoe/c8> is used for coverage reports generation with AVA and Mocha. More on c8: <https://medium.com/the-node-js-collection/rethinking-javascript-test-coverage-5726fb272949>.
 
 ## Dependencies
 
