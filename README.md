@@ -19,6 +19,12 @@ Up to date recommendations: <https://nodejs.org/api/packages.html#packages_dual_
 
 This template assumes the library is going to be stateless.
 
+## Exports `./package.json`
+
+Some tooling in downstream packages might need this.
+
+See <https://github.com/nodejs/node/issues/33460> and <https://github.com/tsmodule/tsmodule/issues/1>.
+
 ## TSConfig
 
 TSConfig reference: <https://www.typescriptlang.org/docs/handbook/tsconfig-json.html>

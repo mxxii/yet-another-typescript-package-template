@@ -4,8 +4,11 @@
   "main": "./lib/index.cjs",
   "types": "./lib/index.d.js",
   "exports": {
-    "import": "./lib/index.mjs",
-    "require": "./lib/index.cjs"
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs"
+    },
+    "./package.json": "./package.json"
   },
   "module": "./lib/index.mjs",
   "type": "module",
