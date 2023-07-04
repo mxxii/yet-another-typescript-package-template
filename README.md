@@ -9,7 +9,7 @@ This template is aimed for Node.js packages development.
 
 ## Node.js
 
-Node 14 is the target version.
+Node 16 is the target version.
 
 <https://nodejs.org/en/about/releases/>
 
@@ -93,7 +93,7 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 
 My test framework of choice. Macros and snapshots are pleasure to work with in AVA. Jest often causes various troubles.
 
-TypeScript support via <https://github.com/TypeStrong/ts-node>.
+TypeScript support via <https://github.com/esbuild-kit/tsx>.
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 

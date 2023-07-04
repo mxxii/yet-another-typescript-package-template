@@ -1,3 +1,3 @@
-import { add } from './myModule';
+import { add } from './myModule.ts';
 
 export { add };
