@@ -65,7 +65,7 @@
     "prettier": "^2.8.8",
     "rimraf": "^5.0.1",
     "rollup": "^3.26.0",
-    "tslib": "^2.6.0",
+    "tslib": "^2.6.1",
     "tsx": "^3.12.7",
     "typedoc": "~0.24.8",
     "typedoc-plugin-markdown": "~3.15.3",
