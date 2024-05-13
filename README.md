@@ -9,7 +9,7 @@ This template is aimed for Node.js packages development.
 
 ## Node.js
 
-Node 16 is the target version.
+Node 18 is the target version.
 
 <https://nodejs.org/en/about/releases/>
 
@@ -71,7 +71,7 @@ Generate API documentation in the `/docs` folder based on code and TSDoc comment
 
 TypeDoc: <https://typedoc.org/>
 
-Markdown plugin: <https://github.com/tgreyuk/typedoc-plugin-markdown>
+Markdown plugin: <https://github.com/tgreyuk/typedoc-plugin-markdown> (became more powerful in version 4).
 
 ## prettier
 
@@ -99,7 +99,7 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 
 My test framework of choice. Macros and snapshots are pleasure to work with in AVA. Jest often causes various troubles.
 
-TypeScript support via <https://github.com/esbuild-kit/tsx>.
+TypeScript support via <https://github.com/tapjs/tsimp>
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
@@ -107,7 +107,7 @@ More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs
 
 `tsd` is the most known tool for type tests but turns out it is rather opinionated and has some limitations.
 
-<https://github.com/mmkal/expect-type> seems to be a better alternative. The only disadvantage is that it gives somewhat obscure failure messages. It already pushes the envelope of what's possible. But there are some discussions in GitHub repo about possible improvements.
+<https://github.com/mmkal/expect-type> seems to be a better alternative.
 
 A common observation about type testing: it is not well compatible with unit testing. The best approach I see is to keep it separate and just run `tsc --noEmit` over it.
 

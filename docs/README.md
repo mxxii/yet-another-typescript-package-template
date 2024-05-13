@@ -1,24 +1,22 @@
-yet-another-typescript-package-template
+**yet-another-typescript-package-template** • **Docs**
+
+***
 
 # yet-another-typescript-package-template
 
-## Table of contents
-
-### Functions
-
-- [add](README.md#add)
-
 ## Functions
 
-### add
+### add()
 
-▸ **add**(`a`, `b`): `number`
+```ts
+function add(a: number, b: number): number
+```
 
 Add two numbers.
 
 #### Parameters
 
-| Name | Type | Description |
+| Parameter | Type | Description |
 | :------ | :------ | :------ |
 | `a` | `number` | first number. |
 | `b` | `number` | second number. |
