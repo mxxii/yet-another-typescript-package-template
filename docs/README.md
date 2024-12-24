@@ -1,4 +1,4 @@
-**yet-another-typescript-package-template** • **Docs**
+**yet-another-typescript-package-template**
 
 ***
 
@@ -17,7 +17,7 @@ Add two numbers.
 #### Parameters
 
 | Parameter | Type | Description |
-| :------ | :------ | :------ |
+| ------ | ------ | ------ |
 | `a` | `number` | first number. |
 | `b` | `number` | second number. |
 

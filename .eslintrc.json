@@ -19,9 +19,7 @@
     "sourceType": "module",
     "ecmaVersion": 2020
   },
-  "rules": {
-    "indent": ["error", 2]
-  },
+  "rules": {},
   "overrides": [
     {
       "files": ["**/*.ts"],
@@ -30,6 +28,7 @@
         "project": ["./tsconfig.eslint.json"]
       },
       "plugins": [
+        "@stylistic",
         "@typescript-eslint",
         "eslint-plugin-tsdoc"
       ],
@@ -39,6 +38,7 @@
         "plugin:@typescript-eslint/recommended-requiring-type-checking"
       ],
       "rules": {
+        "@stylistic/indent": ["error", 2],
         "tsdoc/syntax": "error"
       }
     },

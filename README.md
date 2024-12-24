@@ -9,7 +9,7 @@ This template is aimed for Node.js packages development.
 
 ## Node.js
 
-Node 18 is the target version.
+Node 20 is the target version.
 
 <https://nodejs.org/en/about/releases/>
 
@@ -41,7 +41,7 @@ Alternative TypeScript plugin with some extra features: <https://github.com/ezol
 
 ## concurrently
 
-[Concurrently](https://github.com/open-cli-tools/concurrently) is the closest substitute for `npm-run-all` that is not abandoned.
+[Concurrently](https://github.com/open-cli-tools/concurrently) is a substitute for `npm-run-all` that is not abandoned.
 
 Sequential run can be achieved with `-m 1` arg.
 
@@ -53,7 +53,7 @@ ESlint with TypeScript plugin is currently the preferred way to lint `.ts` files
 
 Only recommended configs are included with the template, with a minimal set of overrides (same applies to all linting tools).
 
-Rules: <https://eslint.org/docs/rules/>
+Rules: <https://eslint.org/docs/rules/> and <https://eslint.style/rules>
 
 Various plugins can conflict with each other so it's a good idea to usee `overrides` in `.eslintrc.json` to keep configuration for different file types separate.
 
@@ -110,6 +110,10 @@ More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs
 <https://github.com/mmkal/expect-type> seems to be a better alternative.
 
 A common observation about type testing: it is not well compatible with unit testing. The best approach I see is to keep it separate and just run `tsc --noEmit` over it.
+
+## iso-bench
+
+<https://github.com/Llorx/iso-bench> seems to be a benchmarking library that is most alive and reliable. Benny is simply dead by now and has unresolved issues.
 
 ## onchange
 
