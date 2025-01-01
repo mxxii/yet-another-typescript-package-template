@@ -77,7 +77,7 @@
     "rollup": "^4.29.1",
     "tsimp": "^2.0.12",
     "typedoc": "~0.27.5",
-    "typedoc-plugin-markdown": "~4.3.3",
+    "typedoc-plugin-markdown": "~4.4.0",
     "typescript": "~5.5.4"
   },
   "ava": {
