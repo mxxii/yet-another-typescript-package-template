@@ -3,7 +3,7 @@
 ![lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/lint/badge.svg)
 ![test status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test/badge.svg)
 [![codecov badge](https://codecov.io/gh/mxxii/yet-another-typescript-package-template/branch/main/graph/badge.svg?token=OQQ500N8HC)](https://codecov.io/gh/mxxii/yet-another-typescript-package-template)
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/mxxii/yet-another-typescript-package-template)
+[![Open in Visual Studio Code](https://img.shields.io/badge/Open_in-Visual_Studio_Code-007acc)](https://open.vscode.dev/mxxii/yet-another-typescript-package-template)
 
 This template is aimed for Node.js packages development.
 
@@ -99,7 +99,9 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 
 My test framework of choice. Macros and snapshots are pleasure to work with in AVA. Jest often causes various troubles.
 
-TypeScript support via <https://github.com/tapjs/tsimp>
+TypeScript support via <https://github.com/bloomberg/ts-blank-space>. It is a type stripper/eraser. Some limitations may apply. Should be perfect with the new `--erasableSyntaxOnly` flag.
+
+If `ts-blank-space` can't be used, there are <https://github.com/tapjs/tsimp> (with [known issue](https://github.com/avajs/ava/issues/3349)) and <https://github.com/TypeStrong/ts-node> (might still work but with own quirks).
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
