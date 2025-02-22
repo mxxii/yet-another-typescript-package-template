@@ -7,29 +7,52 @@
 
 This template is aimed for Node.js packages development.
 
-## Node.js
+
+## Package configuration
+
+### Node.js
 
 Node 20 is the target version.
 
 <https://nodejs.org/en/about/releases/>
 
-## Dual package
+### Dual package
 
 Up to date recommendations: <https://nodejs.org/api/packages.html#packages_dual_commonjs_es_module_packages>
 
 This template assumes the library is going to be stateless.
 
-## Exports `./package.json`
+### Exports `./package.json`
 
 Some tooling in downstream packages might need this.
 
 See <https://github.com/nodejs/node/issues/33460> and <https://github.com/tsmodule/tsmodule/issues/1>.
 
-## TSConfig
+
+## TypeScript language
+
+### TSConfig
 
 TSConfig reference: <https://www.typescriptlang.org/docs/handbook/tsconfig-json.html>
 
-## rollup
+### tsdoc
+
+TSDoc: <https://tsdoc.org/>
+
+ESlint plugin: <https://tsdoc.org/pages/packages/eslint-plugin-tsdoc/>
+
+### typedoc
+
+Generate API documentation in the `/docs` folder based on code and TSDoc comments.
+
+TypeDoc: <https://typedoc.org/>
+
+Markdown plugin: <https://github.com/tgreyuk/typedoc-plugin-markdown> (became more powerful in version 4).
+
+
+## Bundling
+
+### rollup
 
 `rollup` bundler allows certain things that [`tsc` CLI](https://www.typescriptlang.org/docs/handbook/compiler-options.html) doesn't, such as more flexible output files naming - this is a must for a dual package.
 
@@ -39,63 +62,10 @@ TypeScript support is provided by the official plugin: <https://github.com/rollu
 
 Alternative TypeScript plugin with some extra features: <https://github.com/ezolenko/rollup-plugin-typescript2>
 
-## concurrently
 
-[Concurrently](https://github.com/open-cli-tools/concurrently) is a substitute for `npm-run-all` that is not abandoned.
+## Testing and benchmarking
 
-Sequential run can be achieved with `-m 1` arg.
-
-There is also this fork of `npm-run-all` that receives package updates: <https://github.com/bcomnes/npm-run-all2>
-
-## eslint
-
-ESlint with TypeScript plugin is currently the preferred way to lint `.ts` files.
-
-Only recommended configs are included with the template, with a minimal set of overrides (same applies to all linting tools).
-
-Rules: <https://eslint.org/docs/rules/>, <https://eslint.style/rules> and <https://typescript-eslint.io/rules/>
-
-Separate `tsconfig.eslint.json` file allows to lint test files.
-
-In order to use `eslint.config.ts` (TypeScript config file) with Node, additional explicit dependency is used - <https://github.com/unjs/jiti>. It doesn't seem to function properly as a drop-in replacement of `tsimp` CLI or `ts-blank-space` loader. Moar loaders! hellmo.jpg
-
-## tsdoc
-
-TSDoc: <https://tsdoc.org/>
-
-ESlint plugin: <https://tsdoc.org/pages/packages/eslint-plugin-tsdoc/>
-
-## typedoc
-
-Generate API documentation in the `/docs` folder based on code and TSDoc comments.
-
-TypeDoc: <https://typedoc.org/>
-
-Markdown plugin: <https://github.com/tgreyuk/typedoc-plugin-markdown> (became more powerful in version 4).
-
-## prettier
-
-Fast food of code formatting. Minimum decisions, quite wide range of supported file formats.
-
-Options: <https://prettier.io/docs/en/options.html>
-
-Prettier is basically unusable for json files. It is therefore disabled for those.
-
-## eslint-plugin-jsonc
-
-Apparently the most solid solution to lint and format JSON files. It reuses ESlint rules where appropriate. Not all defaults play nicely with all configs though, so a couple of overrides is provided.
-
-Rules: <https://ota-meshi.github.io/eslint-plugin-jsonc/rules/>
-
-## markdownlint
-
-Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
-
-<https://github.com/DavidAnson/markdownlint-cli2> seems to be a better CLI all around at this point.
-
-<https://github.com/igorshubovych/markdownlint-cli> followed more conventional approach but is not going to receive future improvements.
-
-## ava
+### ava
 
 My test framework of choice. Macros and snapshots are pleasure to work with in AVA. Jest often causes various troubles.
 
@@ -107,7 +77,7 @@ If `ts-blank-space` can't be used, there are <https://github.com/tapjs/tsimp> (w
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
-## expect-type
+### expect-type
 
 `tsd` is the most known tool for type tests but turns out it is rather opinionated and has some limitations.
 
@@ -115,26 +85,77 @@ More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs
 
 A common observation about type testing: it is not well compatible with unit testing. The best approach I see is to keep it separate and just run `tsc --noEmit` over it.
 
-## iso-bench
+### iso-bench
 
 <https://github.com/Llorx/iso-bench> seems to be a benchmarking library that is most alive and reliable. Benny is simply dead by now and has unresolved issues.
 
-## onchange
+
+## Linting
+
+### eslint
+
+ESlint with TypeScript plugin is currently the preferred way to lint `.ts` files.
+
+Only recommended configs are included with the template, with a minimal set of overrides (same applies to all linting tools).
+
+Rules: <https://eslint.org/docs/rules/>, <https://eslint.style/rules> and <https://typescript-eslint.io/rules/>
+
+Separate `tsconfig.eslint.json` file allows to lint infrastructure files such as tests.
+
+In order to use `eslint.config.ts` (TypeScript config file) with Node, additional explicit dependency is used - <https://github.com/unjs/jiti>. It doesn't seem to function properly as a drop-in replacement of `tsimp` CLI or `ts-blank-space` loader. Moar loaders! hellmo.jpg
+
+### prettier
+
+Fast food of code formatting. Minimum decisions, quite wide range of supported file formats.
+
+Options: <https://prettier.io/docs/en/options.html>
+
+Prettier is basically unusable for json files. It is therefore disabled for those.
+
+### eslint-plugin-jsonc
+
+Apparently the most solid solution to lint and format JSON files. It reuses ESlint rules where appropriate. Not all defaults play nicely with all configs though, so a couple of overrides is provided.
+
+Rules: <https://ota-meshi.github.io/eslint-plugin-jsonc/rules/>
+
+### markdownlint
+
+Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
+
+<https://github.com/DavidAnson/markdownlint-cli2> seems to be a better CLI all around at this point.
+
+<https://github.com/igorshubovych/markdownlint-cli> followed more conventional approach but is not going to receive future improvements.
+
+
+## Scripts
+
+### concurrently
+
+[Concurrently](https://github.com/open-cli-tools/concurrently) is a substitute for `npm-run-all` that is not abandoned.
+
+Sequential run can be achieved with `-m 1` arg.
+
+There is also this fork of `npm-run-all` that receives package updates: <https://github.com/bcomnes/npm-run-all2>
+
+### onchange
 
 Many tools come with their own watchers, others don't. <https://github.com/Qard/onchange> seems to be the most straightforward solution to add this feature where it is missing.
 
 <https://github.com/M-Zuber/npm-watch> might be a suitable alternative in some cases.
 
-## GitHub actions
+
+## GitHub
+
+### GitHub actions
 
 - <https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs>
 - <https://github.com/actions/setup-node>
 
-## Badges
+### Badges
 
 GitHub workflow status badge: <https://docs.github.com/en/free-pro-team@latest/actions/managing-workflow-runs/adding-a-workflow-status-badge>
 
-## Coverage
+### Coverage
 
 GitHub itself currently doesn't provide badges for coverage. But coverage data can be sent to an external service. For some of them it is as easy as using a ready-made action.
 
@@ -144,7 +165,7 @@ Codecov seems to be the most practical one. <https://about.codecov.io/for/open-s
 
 <https://github.com/bcoe/c8> is used for coverage reports generation with AVA and Mocha. More on c8: <https://medium.com/the-node-js-collection/rethinking-javascript-test-coverage-5726fb272949>.
 
-## Dependencies
+### Dependencies
 
 [Depfu](https://depfu.com/) seems to be useful as a display for the state of dependencies. But their "reasonably up-to-date" policy - a feature that should make their product more pleasing to use - doesn't seem to work as expected and appears way too "lazy".
 
@@ -156,10 +177,7 @@ Dependabot is a part of GitHub now, it delivers security updates automatically a
 
 <https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade> extension for VSCode is currently the most helpful tool for me to update dependencies.
 
-## Publishing
-
-This part is left out for now. No good template solution can be provided yet.
 
 ## License
 
-This repository is a mere template without own functionality, a configuration for external tools and libraries. And as such, it shouldn't be considered a subject of copyright. Instead, you are encouraged to copy it and apply the license of your choice to the product you build.
+This repository is a mere template without own functionality, a configuration for external tools and libraries. And as such, it should not be considered a subject of copyright. Instead, you are encouraged to copy it and apply the license of your choice to the product you build.
