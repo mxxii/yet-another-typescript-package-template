@@ -4,7 +4,8 @@
     "first-line-heading": false,
     "line-length": false,
     "no-duplicate-header": { "allow_different_nesting": true },
-    "no-emphasis-as-heading": false
+    "no-emphasis-as-heading": false,
+    "no-multiple-blanks": { "maximum": 2 }
   },
   "globs": [ "**/*.md" ],
   "gitignore": true
