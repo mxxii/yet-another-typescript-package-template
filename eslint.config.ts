@@ -1,14 +1,12 @@
-
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import eslintPluginJsonc from 'eslint-plugin-jsonc';
 import eslintPluginTsdoc from 'eslint-plugin-tsdoc';
-import stylistic from '@stylistic/eslint-plugin'
+import stylistic from '@stylistic/eslint-plugin';
 
 export default tseslint.config(
-
   // Shared configuration
   eslint.configs.recommended,
   {
@@ -32,7 +30,7 @@ export default tseslint.config(
     },
     rules: {
       '@stylistic/indent': ['error', 2],
-    }
+    },
   },
 
   // TS configuration
@@ -51,11 +49,11 @@ export default tseslint.config(
     plugins: {
       '@typescript-eslint': tsPlugin,
       '@stylistic': stylistic,
-      'tsdoc': eslintPluginTsdoc,
+      tsdoc: eslintPluginTsdoc,
     },
     rules: {
       '@stylistic/indent': ['error', 2],
-      'tsdoc/syntax': 'error'
+      'tsdoc/syntax': 'error',
     },
   },
 
@@ -64,12 +62,11 @@ export default tseslint.config(
   {
     files: ['*.json', '*.json5', '*.jsonc'],
     plugins: {
-      'jsonc': eslintPluginJsonc,
+      jsonc: eslintPluginJsonc,
     },
     rules: {
       'jsonc/array-bracket-newline': ['error', 'consistent'],
-      'jsonc/array-element-newline': ['error', 'consistent']
+      'jsonc/array-element-newline': ['error', 'consistent'],
     },
-  }
-
+  },
 );

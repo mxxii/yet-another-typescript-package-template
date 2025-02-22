@@ -7,7 +7,6 @@
 
 This template is aimed for Node.js packages development.
 
-
 ## Package configuration
 
 ### Node.js
@@ -27,7 +26,6 @@ This template assumes the library is going to be stateless.
 Some tooling in downstream packages might need this.
 
 See <https://github.com/nodejs/node/issues/33460> and <https://github.com/tsmodule/tsmodule/issues/1>.
-
 
 ## TypeScript language
 
@@ -49,7 +47,6 @@ TypeDoc: <https://typedoc.org/>
 
 Markdown plugin: <https://github.com/tgreyuk/typedoc-plugin-markdown> (became more powerful in version 4).
 
-
 ## Bundling
 
 ### rollup
@@ -61,7 +58,6 @@ Docs: <https://rollupjs.org/guide/en/>
 TypeScript support is provided by the official plugin: <https://github.com/rollup/plugins/tree/master/packages/typescript/#readme>
 
 Alternative TypeScript plugin with some extra features: <https://github.com/ezolenko/rollup-plugin-typescript2>
-
 
 ## Testing and benchmarking
 
@@ -88,7 +84,6 @@ A common observation about type testing: it is not well compatible with unit tes
 ### iso-bench
 
 <https://github.com/Llorx/iso-bench> seems to be a benchmarking library that is most alive and reliable. Benny is simply dead by now and has unresolved issues.
-
 
 ## Linting
 
@@ -126,23 +121,19 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 
 <https://github.com/igorshubovych/markdownlint-cli> followed more conventional approach but is not going to receive future improvements.
 
-
 ## Scripts
 
-### concurrently
+### `npm-run-all2`
 
-[Concurrently](https://github.com/open-cli-tools/concurrently) is a substitute for `npm-run-all` that is not abandoned.
+<https://github.com/bcomnes/npm-run-all2> is a maintained fork of `npm-run-all` tool.
 
-Sequential run can be achieved with `-m 1` arg.
-
-There is also this fork of `npm-run-all` that receives package updates: <https://github.com/bcomnes/npm-run-all2>
+<https://github.com/open-cli-tools/concurrently> is another alternative, but it seems to not report properly when any of subtasks exited with error.
 
 ### onchange
 
 Many tools come with their own watchers, others don't. <https://github.com/Qard/onchange> seems to be the most straightforward solution to add this feature where it is missing.
 
 <https://github.com/M-Zuber/npm-watch> might be a suitable alternative in some cases.
-
 
 ## GitHub
 
@@ -176,7 +167,6 @@ Dependabot is a part of GitHub now, it delivers security updates automatically a
 <https://marketplace.visualstudio.com/items?itemName=idered.npm> extension for VSCode had a good premise but seems to be dropped half-baked. I only use it now to quickly see the list of available versions for some packages.
 
 <https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade> extension for VSCode is currently the most helpful tool for me to update dependencies.
-
 
 ## License
 
