@@ -53,11 +53,11 @@ ESlint with TypeScript plugin is currently the preferred way to lint `.ts` files
 
 Only recommended configs are included with the template, with a minimal set of overrides (same applies to all linting tools).
 
-Rules: <https://eslint.org/docs/rules/> and <https://eslint.style/rules>
-
-Various plugins can conflict with each other so it's a good idea to usee `overrides` in `.eslintrc.json` to keep configuration for different file types separate.
+Rules: <https://eslint.org/docs/rules/>, <https://eslint.style/rules> and <https://typescript-eslint.io/rules/>
 
 Separate `tsconfig.eslint.json` file allows to lint test files.
+
+In order to use `eslint.config.ts` (TypeScript config file) with Node, additional explicit dependency is used - <https://github.com/unjs/jiti>. It doesn't seem to function properly as a drop-in replacement of `tsimp` CLI or `ts-blank-space` loader. Moar loaders! hellmo.jpg
 
 ## tsdoc
 

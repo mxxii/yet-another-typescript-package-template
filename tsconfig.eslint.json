@@ -5,5 +5,6 @@
     "test-*/**/*.ts",
     "test-types/**/*.ts",
     "benchmarks/**/*.ts",
+    "eslint.config.ts"
   ]
 }
