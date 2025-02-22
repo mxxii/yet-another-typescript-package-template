@@ -103,6 +103,8 @@ TypeScript support via <https://github.com/bloomberg/ts-blank-space>. It is a ty
 
 If `ts-blank-space` can't be used, there are <https://github.com/tapjs/tsimp> (with [known issue](https://github.com/avajs/ava/issues/3349)) and <https://github.com/TypeStrong/ts-node> (might still work but with own quirks).
 
+`ts-blank-space` is [currently missing](https://github.com/bloomberg/ts-blank-space/issues/28) CLI support, so `tsimp` has to be kept for scripts.
+
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
 ## expect-type
