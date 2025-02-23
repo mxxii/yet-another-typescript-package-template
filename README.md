@@ -7,6 +7,7 @@
 
 This template is aimed for Node.js packages development.
 
+
 ## Package configuration
 
 ### Node.js
@@ -26,6 +27,7 @@ This template assumes the library is going to be stateless.
 Some tooling in downstream packages might need this.
 
 See <https://github.com/nodejs/node/issues/33460> and <https://github.com/tsmodule/tsmodule/issues/1>.
+
 
 ## TypeScript language
 
@@ -47,6 +49,7 @@ TypeDoc: <https://typedoc.org/>
 
 Markdown plugin: <https://github.com/tgreyuk/typedoc-plugin-markdown> (became more powerful in version 4).
 
+
 ## Bundling
 
 ### rollup
@@ -58,6 +61,7 @@ Docs: <https://rollupjs.org/guide/en/>
 TypeScript support is provided by the official plugin: <https://github.com/rollup/plugins/tree/master/packages/typescript/#readme>
 
 Alternative TypeScript plugin with some extra features: <https://github.com/ezolenko/rollup-plugin-typescript2>
+
 
 ## Testing and benchmarking
 
@@ -85,6 +89,7 @@ A common observation about type testing: it is not well compatible with unit tes
 
 <https://github.com/Llorx/iso-bench> seems to be a benchmarking library that is most alive and reliable. Benny is simply dead by now and has unresolved issues.
 
+
 ## Linting
 
 ### eslint
@@ -99,13 +104,7 @@ Separate `tsconfig.eslint.json` file allows to lint infrastructure files such as
 
 In order to use `eslint.config.ts` (TypeScript config file) with Node, additional explicit dependency is used - <https://github.com/unjs/jiti>. It doesn't seem to function properly as a drop-in replacement of `tsimp` CLI or `ts-blank-space` loader. Moar loaders! hellmo.jpg
 
-### prettier
-
-Fast food of code formatting. Minimum decisions, quite wide range of supported file formats.
-
-Options: <https://prettier.io/docs/en/options.html>
-
-Prettier is basically unusable for json files. It is therefore disabled for those.
+`eslint` is a royal PITA to configure. But Prettier is equally extreme approach in opposite direction - 99% opinionated, 1% configurable, no workarounds. So, unable to fight it for simple things, I don't use Prettier.
 
 ### eslint-plugin-jsonc
 
@@ -121,6 +120,7 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 
 <https://github.com/igorshubovych/markdownlint-cli> followed more conventional approach but is not going to receive future improvements.
 
+
 ## Scripts
 
 ### `npm-run-all2`
@@ -134,6 +134,7 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 Many tools come with their own watchers, others don't. <https://github.com/Qard/onchange> seems to be the most straightforward solution to add this feature where it is missing.
 
 <https://github.com/M-Zuber/npm-watch> might be a suitable alternative in some cases.
+
 
 ## GitHub
 
@@ -167,6 +168,7 @@ Dependabot is a part of GitHub now, it delivers security updates automatically a
 <https://marketplace.visualstudio.com/items?itemName=idered.npm> extension for VSCode had a good premise but seems to be dropped half-baked. I only use it now to quickly see the list of available versions for some packages.
 
 <https://marketplace.visualstudio.com/items?itemName=codeandstuff.package-json-upgrade> extension for VSCode is currently the most helpful tool for me to update dependencies.
+
 
 ## License
 

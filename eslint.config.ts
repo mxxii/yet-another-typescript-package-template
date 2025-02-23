@@ -1,12 +1,12 @@
 import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
-import tsParser from '@typescript-eslint/parser';
+import tsEslint from 'typescript-eslint';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
-import eslintPluginJsonc from 'eslint-plugin-jsonc';
-import eslintPluginTsdoc from 'eslint-plugin-tsdoc';
+import jsoncPlugin from 'eslint-plugin-jsonc';
+import tsdocPlugin from 'eslint-plugin-tsdoc';
 import stylistic from '@stylistic/eslint-plugin';
 
-export default tseslint.config(
+export default tsEslint.config(
+
   // Shared configuration
   eslint.configs.recommended,
   {
@@ -22,9 +22,14 @@ export default tseslint.config(
     ],
   },
 
-  // JS configuration
+  // Styles configuration
+  stylistic.configs.customize({
+    quoteProps: 'consistent',
+    semi: true,
+    jsx: false,
+  }),
   {
-    files: ['**/*.js'],
+    files: ['**/*.{ts,js}'],
     plugins: {
       '@stylistic': stylistic,
     },
@@ -34,39 +39,45 @@ export default tseslint.config(
   },
 
   // TS configuration
-  ...tseslint.configs.recommended,
+  ...tsEslint.configs.recommendedTypeChecked.map(
+    c => ({ ...c, files: ['**/*.ts'] }),
+  ),
   {
     files: ['**/*.ts'],
     languageOptions: {
-      parser: tsParser,
       parserOptions: {
         tsconfigRootDir: import.meta.dirname,
-        project: './tsconfig.eslint.json',
+        projectService: {
+          allowDefaultProject: [
+            'test-*/*.ts',
+            'benchmarks/*.ts',
+            'eslint.config.ts',
+          ],
+        },
         ecmaVersion: 2020,
         sourceType: 'module',
       },
     },
     plugins: {
       '@typescript-eslint': tsPlugin,
-      '@stylistic': stylistic,
-      tsdoc: eslintPluginTsdoc,
+      'tsdoc': tsdocPlugin,
     },
     rules: {
-      '@stylistic/indent': ['error', 2],
       'tsdoc/syntax': 'error',
     },
   },
 
   // JSON configuration
-  ...eslintPluginJsonc.configs['flat/recommended-with-jsonc'],
+  ...jsoncPlugin.configs['flat/recommended-with-jsonc'],
   {
     files: ['*.json', '*.json5', '*.jsonc'],
     plugins: {
-      jsonc: eslintPluginJsonc,
+      'jsonc': jsoncPlugin,
     },
     rules: {
       'jsonc/array-bracket-newline': ['error', 'consistent'],
       'jsonc/array-element-newline': ['error', 'consistent'],
     },
   },
+
 );
