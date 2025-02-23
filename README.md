@@ -2,7 +2,7 @@
 
 ![lint status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/lint/badge.svg)
 ![test status badge](https://github.com/mxxii/yet-another-typescript-package-template/workflows/test/badge.svg)
-[![codecov badge](https://codecov.io/gh/mxxii/yet-another-typescript-package-template/branch/main/graph/badge.svg?token=OQQ500N8HC)](https://codecov.io/gh/mxxii/yet-another-typescript-package-template)
+![test coverage badge](https://img.shields.io/nycrc/mxxii/yet-another-typescript-package-template?config=.c8rc.json)
 [![Open in Visual Studio Code](https://img.shields.io/badge/Open_in-Visual_Studio_Code-007acc)](https://open.vscode.dev/mxxii/yet-another-typescript-package-template)
 
 This template is aimed for Node.js packages development.
@@ -169,13 +169,11 @@ GitHub workflow status badge: <https://docs.github.com/en/free-pro-team@latest/a
 
 ### Coverage
 
-GitHub itself currently doesn't provide badges for coverage. But coverage data can be sent to an external service. For some of them it is as easy as using a ready-made action.
+List of coverage providers (among others) supported by Shields_io: <https://shields.io/badges>
 
-List of coverage providers supported by Shields_io: <https://shields.io/category/coverage>
+<https://github.com/bcoe/c8> is used for coverage reports generation. More on c8: <https://medium.com/the-node-js-collection/rethinking-javascript-test-coverage-5726fb272949>.
 
-Codecov seems to be the most practical one. <https://about.codecov.io/for/open-source/>
-
-<https://github.com/bcoe/c8> is used for coverage reports generation with AVA and Mocha. More on c8: <https://medium.com/the-node-js-collection/rethinking-javascript-test-coverage-5726fb272949>.
+Instead of handling coverage reports by a 3rd-party service, a Shields_io badge can be generated based on the minimum required coverage in the config file. See <https://shields.io/badges/nycrc-config-on-git-hub> (`c8` has compatible config). Obviously, for this to be representative of reality, tests should be run through `c8` with coverage check enabled so that it would fail when conditions aren't met.
 
 ### Dependencies
 

@@ -4,13 +4,12 @@ on: [push, pull_request]
 
 jobs:
   test:
-    name: Run tests and upload coverage reports
+    name: Run tests
 
     strategy:
       matrix:
         node-version: [20.x, 22.x]
         os: [ubuntu-latest, windows-latest]
-        test-set: [ava]
 
     runs-on: ${{ matrix.os }}
 
@@ -27,14 +26,5 @@ jobs:
 
       - run: npm ci
 
-      - name: Generate coverage report with ${{ matrix.test-set }}
-        run: npm run test-cover:${{ matrix.test-set }}
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage/lcov.info
-          flags: unit,${{ matrix.test-set }},${{ matrix.os }}
-          fail_ci_if_error: true
-          verbose: true
+      - name: Run tests, including coverage check
+        run: npm run test
