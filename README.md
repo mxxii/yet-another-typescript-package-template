@@ -49,6 +49,14 @@ TypeDoc: <https://typedoc.org/>
 
 Markdown plugin: <https://github.com/tgreyuk/typedoc-plugin-markdown> (became more powerful in version 4).
 
+### `@arethetypeswrong/cli`
+
+Quirky export resolution algorithms require to provide separate type definition files. This tool helps to validate type exports of a package.
+
+Docs: <https://github.com/arethetypeswrong/arethetypeswrong.github.io/blob/main/packages/cli/README.md>
+
+Additional note: TypeScript export resolution [quirk](https://github.com/microsoft/TypeScript/issues/50762) can cause an issue in complex cases. Can be avoided by keeping `types` implicitly resolvable or defined _before_ `default` export.
+
 
 ## Bundling
 
@@ -61,6 +69,18 @@ Docs: <https://rollupjs.org/guide/en/>
 TypeScript support is provided by the official plugin: <https://github.com/rollup/plugins/tree/master/packages/typescript/#readme>
 
 Alternative TypeScript plugin with some extra features: <https://github.com/ezolenko/rollup-plugin-typescript2>
+
+Type definition files are build with <https://github.com/Swatinem/rollup-plugin-dts>.
+
+Another plugin, <https://github.com/vladshcherbin/rollup-plugin-delete>, might be needed for cleanup of unnecessary generated files.
+
+### pkgroll
+
+"Zero-configuration" wrapper around `rollup` and `esbuild` that seems to do just what is needed based on `package.json` alone.
+
+Docs: <https://github.com/privatenumber/pkgroll>
+
+Yet to see how it holds up in more complicated cases.
 
 
 ## Testing and benchmarking
