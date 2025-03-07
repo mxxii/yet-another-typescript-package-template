@@ -51,7 +51,6 @@ export default tsEslint.config(
           allowDefaultProject: [
             'test-*/*.ts',
             'benchmarks/*.ts',
-            'eslint.config.ts',
           ],
         },
         ecmaVersion: 2020,

@@ -35,6 +35,8 @@ See <https://github.com/nodejs/node/issues/33460> and <https://github.com/tsmodu
 
 TSConfig reference: <https://www.typescriptlang.org/docs/handbook/tsconfig-json.html>
 
+It is probably a good idea to start new projects with [`--erasableSyntaxOnly`](https://www.typescriptlang.org/tsconfig/#erasableSyntaxOnly) regardless of Node version, so the option is included in `tsconfig.json`. It also ensures compatibility with `ts-blank-space` loader (see below under Testing and benchmarking).
+
 ### tsdoc
 
 TSDoc: <https://tsdoc.org/>
@@ -80,7 +82,7 @@ Another plugin, <https://github.com/vladshcherbin/rollup-plugin-delete>, might b
 
 Docs: <https://github.com/privatenumber/pkgroll>
 
-Yet to see how it holds up in more complicated cases.
+Yet to see how it holds up in more complicated cases. Waits for a PR to update a vulnerable dependency - doesn't instill confidence...
 
 
 ## Testing and benchmarking
@@ -92,8 +94,6 @@ My test framework of choice. Macros and snapshots are pleasure to work with in A
 TypeScript support via <https://github.com/bloomberg/ts-blank-space>. It is a type stripper/eraser. Some limitations may apply. Should be perfect with the new `--erasableSyntaxOnly` flag.
 
 If `ts-blank-space` can't be used, there are <https://github.com/tapjs/tsimp> (with [known issue](https://github.com/avajs/ava/issues/3349)) and <https://github.com/TypeStrong/ts-node> (might still work but with own quirks).
-
-`ts-blank-space` is [currently missing](https://github.com/bloomberg/ts-blank-space/issues/28) CLI support, so `tsimp` has to be kept for scripts.
 
 More notes on TypeScript support: <https://github.com/avajs/ava/blob/master/docs/recipes/typescript.md>
 
@@ -122,7 +122,7 @@ Rules: <https://eslint.org/docs/rules/>, <https://eslint.style/rules> and <https
 
 Separate `tsconfig.eslint.json` file allows to lint infrastructure files such as tests.
 
-In order to use `eslint.config.ts` (TypeScript config file) with Node, additional explicit dependency is used - <https://github.com/unjs/jiti>. It doesn't seem to function properly as a drop-in replacement of `tsimp` CLI or `ts-blank-space` loader. Moar loaders! hellmo.jpg
+In order to use `eslint.config.ts` (TypeScript config file) with Node, additional explicit dependency is needed - <https://github.com/unjs/jiti>. It doesn't seem to function properly as a drop-in replacement of `tsimp` CLI or `ts-blank-space` loader. Moar loaders! hellmo.jpg. No clear advantage to justify extra dependency - it is easier to stick with `eslint.config.(m)js`
 
 `eslint` is a royal PITA to configure. But Prettier is equally extreme approach in opposite direction - 99% opinionated, 1% configurable, no workarounds. So, unable to fight it for simple things, I don't use Prettier.
 
