@@ -148,7 +148,7 @@ Docs: <https://biomejs.dev/guides/getting-started/>
 
 Tries to replace both `eslint` (linking) and Prettier (formatting), with own analyzer functionality on top (only import sorting for now).
 
-Shares the same philosophy and options as Prettier for formatting. This is unfortunate for me. Im my own projects, I want code that is readable for me rather than code that is equally crappy for everyone. There are formatting rules that don't exist not because the ideal already exists, but because nobody way at the right time at the right place to formulate something better.
+Shares the same philosophy and options as Prettier for formatting. This is unfortunate for me. In my own projects, I want code that is readable for me rather than code that is equally crappy for everyone. There are formatting rules that don't exist not because the ideal already exists, but because nobody was at the right place at the right time to formulate something better.
 
 Linter and analyzer still seem like a good value proposition for projects where developers don't want to mess with `eslint` and still get a good set of rules.
 
