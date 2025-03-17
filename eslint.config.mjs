@@ -1,9 +1,9 @@
 import eslint from '@eslint/js';
-import tsEslint from 'typescript-eslint';
+import stylistic from '@stylistic/eslint-plugin';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
 import jsoncPlugin from 'eslint-plugin-jsonc';
 import tsdocPlugin from 'eslint-plugin-tsdoc';
-import stylistic from '@stylistic/eslint-plugin';
+import tsEslint from 'typescript-eslint';
 
 export default tsEslint.config(
 

@@ -124,7 +124,7 @@ Separate `tsconfig.eslint.json` file allows to lint infrastructure files such as
 
 In order to use `eslint.config.ts` (TypeScript config file) with Node, additional explicit dependency is needed - <https://github.com/unjs/jiti>. It doesn't seem to function properly as a drop-in replacement of `tsimp` CLI or `ts-blank-space` loader. Moar loaders! hellmo.jpg. No clear advantage to justify extra dependency - it is easier to stick with `eslint.config.(m)js`
 
-`eslint` is a royal PITA to configure. But Prettier is equally extreme approach in opposite direction - 99% opinionated, 1% configurable, no workarounds. So, unable to fight it for simple things, I don't use Prettier.
+`eslint` is a royal PITA to configure. But Prettier is equally extreme approach in opposite direction - 99% opinionated, 1% configurable, no workarounds. So, unable to fight it for simple things, I don't use Prettier and prefer `eslint` with Stylistic.
 
 ### eslint-plugin-jsonc
 
@@ -139,6 +139,16 @@ Rules: <https://github.com/DavidAnson/markdownlint/blob/main/README.md>
 <https://github.com/DavidAnson/markdownlint-cli2> seems to be a better CLI all around at this point.
 
 <https://github.com/igorshubovych/markdownlint-cli> followed more conventional approach but is not going to receive future improvements.
+
+### biome
+
+Docs: <https://biomejs.dev/guides/getting-started/>
+
+Tries to replace both `eslint` (linking) and Prettier (formatting), with own analyzer functionality on top (only import sorting for now).
+
+Shares the same philosophy and options as Prettier for formatting. This is unfortunate for me. Im my own projects, I want code that is readable for me rather than code that is equally crappy for everyone. There are formatting rules that don't exist not because the ideal already exists, but because nobody way at the right time at the right place to formulate something better.
+
+Linter and analyzer still seem like a good value proposition for projects where developers don't want to mess with `eslint` and still get a good set of rules.
 
 
 ## Scripts

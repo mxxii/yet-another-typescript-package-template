@@ -34,8 +34,10 @@
     "check-all": "run-p lint test",
     "fix-all": "run-s lint-fix:*",
     "lint": "run-p lint:*",
+    "lint:biome": "biome check",
     "lint:eslint": "eslint **/*.{js,json,jsonc,ts}",
     "lint:md": "markdownlint-cli2",
+    "lint-fix:biome": "biome check --write",
     "lint-fix:eslint": "eslint --fix --fix-type layout **/*.{js,json,jsonc,ts}",
     "lint-fix:md": "markdownlint-cli2 --fix",
     "prepublishOnly": "npm run checkAll",
@@ -52,6 +54,7 @@
     "node": ">=20"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "@rollup/plugin-typescript": "^12.1.2",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@tsconfig/node20": "^20.1.4",
