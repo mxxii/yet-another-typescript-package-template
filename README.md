@@ -7,6 +7,8 @@
 
 This template is aimed for Node.js packages development.
 
+In practice, this is mostly a playground to try out various infrastructure tools.
+
 
 ## Package configuration
 
