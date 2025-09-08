@@ -9,7 +9,7 @@
 ### add()
 
 ```ts
-function add(a: number, b: number): number
+function add(a: number, b: number): number;
 ```
 
 Add two numbers.

@@ -1,11 +1,12 @@
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
+import { defineConfig } from 'eslint/config';
 import jsoncPlugin from 'eslint-plugin-jsonc';
 import tsdocPlugin from 'eslint-plugin-tsdoc';
 import tsEslint from 'typescript-eslint';
 
-export default tsEslint.config(
+export default defineConfig(
 
   // Shared configuration
   eslint.configs.recommended,
